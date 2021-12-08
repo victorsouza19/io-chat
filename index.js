@@ -4,24 +4,26 @@ http = require('http').createServer(app),
 io = require('socket.io')(http);
 
 io.on('connection', (socket) => {
+
   socket.on('disconnect', () => {
     console.log(`${socket.id} disconnected.`);
   });
 
-  socket.on('connected', () => {
-    console.log(`${socket.id} connected.`);
+  socket.on("message", data => {
+    io.emit("showMessage", data);
+    console.log(data);
   });
 
-  socket.on('word', data => {
-    console.log(data);
-    socket.emit('result', data.message + ' - Thank you!')
-  });
 });
 
-
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 app.get("/", (req,res) => {
+  res.render("login");
+});
+
+app.get("/chat", (req,res) => {
   res.render("index");
 });
 
