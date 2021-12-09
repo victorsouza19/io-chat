@@ -9,12 +9,14 @@ let socket = io("http://localhost:3030");
     console.log(data);
     let chat = document.getElementById("chat");
     let p = document.createElement('p');
-    p.innerHTML = `${data.username}: ${data.msg}`;
+    let span = document.createElement('span');
+    span.innerHTML = `${data.username}: `;
+    p.append(span, data.msg);
     chat.append(p);
   });
 
   function sendMessage(){
-    let username = document.getElementById("username").value;
+    let username = localStorage.getItem('username');
     let message = document.getElementById("message").value;
     socket.emit("message", {msg: message, username});
   }

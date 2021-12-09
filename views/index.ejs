@@ -1,20 +1,20 @@
 <%- include ('./partials/header') %>
-<div class="container">
-  <h1 class="animate__animated animate__jello animate__slower">
-      
-    i<img class="logo-moon"src="/img/moon.png" alt="moon">Chat
-  </h1>
+<body>
+  <div class="container" onload="test()">
+    <h1 class="animate__animated">
+        
+      i<img class="logo-moon"src="/img/moon.png" alt="moon">Chat
+    </h1>
 
-    <div id="chat">
-      
-    </div>
-    <div class="card-message">
-      <input type="text" id="message">
-      <button onclick="sendMessage()">></button>
-    </div>
-
-   
-    
-</div>
+      <div id="chat">
+        
+      </div>
+      <div class="card-message">
+        <input type="text" id="message">
+        <button onclick="sendMessage()">></button>
+      </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
 <script src="/js/socketio.js"></script>
 <%- include ('./partials/footer') %>

@@ -97,6 +97,20 @@ body{
   min-height: 84%;
   overflow-y: scroll;
   background: #EDF0F4;
+  padding: 1rem;
+}
+
+#chat p{
+  background: #B2B9C5;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0;
+}
+
+#chat span{
+  font-style: italic;
+  color: #FFF;
+  margin-right: 0.2rem;
 }
 
 .card-message{
