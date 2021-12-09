@@ -1,7 +1,10 @@
+
+
 const express = require('express'),
 app = express(),
 http = require('http').createServer(app),
-io = require('socket.io')(http);
+io = require('socket.io')(http),
+UserAuth = require('./middleware/UserAuth');
 
 io.on('connection', (socket) => {
 
@@ -11,7 +14,7 @@ io.on('connection', (socket) => {
 
   socket.on("message", data => {
     io.emit("showMessage", data);
-    console.log(data);
+    // console.log(data);
   });
 
 });
@@ -23,7 +26,7 @@ app.get("/", (req,res) => {
   res.render("login");
 });
 
-app.get("/chat", (req,res) => {
+app.get("/chat", UserAuth, (req,res) => {
   res.render("index");
 });
 
