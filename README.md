@@ -47,7 +47,7 @@ node index.js
 
 Test and enjoy! 😅
 
-## 📫 Contributing for Pokédex
+## 📫 Contributing for ioChat
 
 To contribute, follow these steps:
 
