@@ -6,19 +6,26 @@ let socket = io("http://localhost:3030");
   });
 
   socket.on('showMessage', data => {
-    console.log(data);
+    let user = localStorage.getItem('username');
+    let messageBackground = data.username === user ? 'my-msg' : 'another-msg';
+
     let chat = document.getElementById("chat");
-    let p = document.createElement('p');
-    let span = document.createElement('span');
-    span.innerHTML = `${data.username}: `;
-    p.append(span, data.msg);
-    chat.append(p);
+    let message = document.getElementById("chat").innerHTML;
+    message += `<div class="${messageBackground} animate__animated animate__headShake">
+    <h5>${data.username}</h5>
+    <p>${data.msg}</p>
+    </div>`;
+
+    chat.innerHTML = message;
+    chat.scrollTo(0, document.body.scrollHeight);
   });
 
   function sendMessage(){
     let username = localStorage.getItem('username');
     let message = document.getElementById("message").value;
     socket.emit("message", {msg: message, username});
+
+    document.getElementById('message').value = '';
   }
 
 

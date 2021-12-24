@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap");
+/* Global CSS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.container,
+.login-container {
+  height: 100vh;
+  max-width: 700px;
+  width: 100vw;
+  padding: 0.8rem;
+  margin: 0 auto;
+}
+
+/* Login Page */
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.login-container h1 {
+  text-align: center;
+  padding: 1rem;
+}
+
+.login-container p > span {
+  color: #00a389;
+  font-weight: 700;
+  background: #00a3883b;
+  padding: 0 0.2rem;
+}
+
+.login-container .login-container p {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.input-username,
+.login {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+}
+
+.input-username {
+  margin: 2.2rem 0;
+  -webkit-box-shadow: 0px 0px 6px #c0c3c79f;
+          box-shadow: 0px 0px 6px #c0c3c79f;
+  border-radius: 1rem;
+}
+
+.login {
+  background: #00a389;
+  color: #FFF;
+  border: none;
+  border-radius: 1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login:hover {
+  background: #078872;
+}
+
+.footer-img {
+  width: 100%;
+  max-width: 25rem;
+  padding: 1rem;
+}
+
+.logo-moon {
+  max-width: 1.3rem;
+}
+
+.bg-img {
+  position: absolute;
+  width: 33%;
+  max-width: 13rem;
+  top: 0;
+  right: 0;
+}
+
+/* Chat Page */
+#chat {
+  max-height: 84%;
+  min-height: 84%;
+  overflow-y: scroll;
+  background: #EDF0F4;
+  padding: 1rem;
+}
+
+#chat .my-msg {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0.2rem 1rem;
+  margin: 1rem 0 1rem 3rem;
+}
+
+#chat .my-msg h5 {
+  font-style: italic;
+}
+
+#chat .another-msg {
+  background: #2eb17f;
+  padding: 1rem;
+  border-radius: 1rem 1rem 1rem 0.2rem;
+  margin: 1rem 3rem 1rem 0;
+  color: #FFF;
+}
+
+#chat .another-msg h5 {
+  font-style: italic;
+}
+
+.card-message {
+  min-height: 10%;
+  max-height: 10%;
+  background: #EDF0F4;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card-message input {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 6px #c0c3c79f;
+          box-shadow: 0px 0px 6px #c0c3c79f;
+  border-radius: 1rem;
+}
+
+.card-message button {
+  margin-left: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #00a389;
+  color: #FFF;
+  border: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card-message button:hover {
+  background: #078872;
+}
+
+.container h1 {
+  background: #EDF0F4;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid #c7c7c7;
+  min-height: 6%;
+  max-height: 6%;
+  text-align: center;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */
