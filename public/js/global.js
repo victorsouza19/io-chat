@@ -6,4 +6,11 @@ function login(){
   return window.location.href="/chat";
 }
 
+function logout(){
+  localStorage.removeItem('username');
+  return window.location.href="/";
+}
+
+
+
 

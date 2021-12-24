@@ -15,7 +15,7 @@ body {
 .container,
 .login-container {
   height: 100vh;
-  max-width: 700px;
+  max-width: 800px;
   width: 100vw;
   padding: 0.8rem;
   margin: 0 auto;
@@ -181,5 +181,14 @@ body {
   max-height: 6%;
   text-align: center;
   padding: 0.5rem;
+}
+
+.logout {
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-right: 2rem;
+  border-radius: 1rem;
+  color: #00a389;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
